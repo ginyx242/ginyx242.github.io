@@ -6,31 +6,56 @@
     font-family: "Roboto", sans-serif;
 
 }
+body{
+    padding-top: 90px;
+}
+body.nav-side{
+    padding-top: 0;
+    padding-left: 100px;
+}
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 10px rgba(0, 0,0,0.5);
-    padding: 10px;
-}img{
-    width: 70px;
-    height: 60px;
-    margin: 15px;
+    padding: 30px;
 }
-.droite ul{
+header.side{
+    top: 50%;
+    left: 0;
+    width: 99px;
+    height: 100%;
+    transform: translateY(-50%);
+    background-color: black;
+}
+nav{
+    position: fixed;
+    top: 16px;
+    left: 68%;
+    width: 100%;
+    transform: all 0.4s ease;
+}
+nav.side{
     display: flex;
-    list-style: none;
-}
-.droite ul li{
-    margin: 10px;
-    
-
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 98px;
+    height: 100%;
+    transform: translateY(-50%);
+    flex-direction: column;
 }
 a{
     text-decoration: none;
-    color: orange;
+    color: rgb(37, 90, 6);
     font-weight: bold;
     font-size: 14px;
-    border: 1px solid black;
+    border: 1px solid rgb(37, 90, 6);
     border-radius: 10px;
     padding: 10px;
     background-color: black;
@@ -42,34 +67,11 @@ a:hover{
     border: none;
     font-style: italic;
 }
-.home-section{
-    display: flex;
-    gap: 50px;
-    margin-top: 50px ;
+footer{
+     display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,0.5);
+    padding: 30px;
+    background-color: rgb(0, 10, 2);
+    color: gray;
 }
-.left {
-    width: 400px;
-    position: relative;
-}
-.left img{
-    width: 250px;
-    object-fit: cover;
-    height: 200px;
-    position: absolute;
-    border-radius: 10px ;
-    }
-    .left .left-image2{
-        width: 150px;
-        height: 100px;
-        margin-top: 150PX;
-        margin-left: 150PX;
-        transition: 0.2S;
-
-    }
-    .left.left-image2:hover{
-        transform: scale(1.2)rotate(3deg);
-        cursor: pointer;
-    }
-    .droite{
-        margin-top: 50px;
-    }

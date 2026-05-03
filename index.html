@@ -12,18 +12,42 @@
 </head>
 <body>
     <header>
-        <img class="img-menu" src="" alt="">
-        <img src="" alt="">
-        <div class="droite">
-            <ul>
-                <li><a href="#">notre equipe</a></li>
-                <li><a href="#">localisation</a></li>
-                <li><a href="#">produit</a></li>
-                <li><button class="header_btn">nous contacter</button></li>
-            </ul>
-        </div>
+       <nav>
+        <a href="#apropos">A propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contacts">Contacts</a>
+       </nav>
     </header>
     <h1>bienvenue sur mon site</h1>
     <p>site en construction.</p>
+   <footer>
+    Ginyx-God_iven &copy;
+   </footer>
+    <script>
+       const header = document.querySelector('header');
+       const body = document.body;
+       window.addEventListener('scroll', () => {
+        if (window.scrollY> 50) {
+            header.classList.add('side');
+            body.classList.add('nav-side');
+        } else {
+            header.classList.remove('side');
+            body.classList.remove('nav-side');
+        }
+       });
+
+        window.addEventListener(
+            'scroll', () =>{const navbar= document.querySelector('nav');
+            const body= document.body;
+            if (window.scrollY > 50) {
+                navbar.classList.add('side');
+                body.classList.add('nav-side');
+            } else {
+                navbar.classList.remove('side');
+                body.classList.remove('nav-side');
+            }
+            });
+    </script>
 </body>
 </html>

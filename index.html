@@ -12,6 +12,11 @@
 </head>
 <body>
     <header>
+        <img class="profil" src="images/IMG-20250913-WA0073.jpg" alt="photo de profil du site">
+        <h1 class="nom">
+            <span class="stroke">GI</span><span class="green">NYX</span><br>
+            God_iven NDZAMACEL
+        </h1>
        <nav>
         <a href="#apropos">A propos</a>
         <a href="#competences">Compétences</a>
@@ -19,12 +24,20 @@
         <a href="#contacts">Contacts</a>
        </nav>
     </header>
-    <h1>bienvenue sur mon site</h1>
-    <p>site en construction.</p>
+    <main>
+        <div id="cursor"></div>
+        <h1>bienvenue sur mon site</h1>
+        <p>site en construction.</p>
+    </main>
    <footer>
     Ginyx-God_iven &copy;
    </footer>
     <script>
+         const cur = document.getElementById('cursor');
+         document.addEventListener('mousemove', e => {
+         cur.style.left = (e.clientX - 6) + 'px';
+         cur.style.top  = (e.clientY - 6) + 'px';
+        });
        const header = document.querySelector('header');
        const body = document.body;
        window.addEventListener('scroll', () => {
